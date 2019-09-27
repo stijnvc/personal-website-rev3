@@ -1,0 +1,28 @@
+---
+layout: homepage
+title: Projects
+---
+
+
+
+<div class="fade flex-container portfolio-items">
+{% for item in site.fp-collection %}
+<article class="clearfix fade flex-item flex-{{ item.flex }}">
+  <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
+    <div class="thumb">
+      <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
+    </div>
+    <div class="info clearfix">
+      <div class="description">
+        <h1>{{ item.title }}</h1>
+      </div>
+    </div>
+  </a>
+</article>
+{% endfor %}
+</div>
+<style>
+a.projects {
+  color: black;
+}
+</style>
