@@ -97,10 +97,14 @@ html {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+.flex-large {
+  width: 100%;
+  max-width: none;
+}
 .wrapper {
   margin: 0 auto;
-  max-width: 620px;
-  padding: 0 40px;
+  max-width: 780px;
+  padding: 0 20px;
   @media (min-width: 920px){
     max-width: 1400px;
     padding: 0 80px;
@@ -241,11 +245,14 @@ header {
     }
     a {
     text-decoration: none;
-  }
+    }
     h1 {
       font-size: 15px;
       font-weight: 400;
       color: rgba(0,0,0,.65);
+    }
+    img {
+      width: 100%;
     }
   }
   article:hover {
