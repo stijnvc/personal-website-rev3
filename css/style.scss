@@ -22,6 +22,12 @@
 
 @font-face {
 	font-family: 'FF DIN Pro Web';
+	src: url('fonts/FFDINPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FF DIN Pro Web';
 	src: url('fonts/FFDINPro-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
@@ -68,6 +74,10 @@ body {
   line-height: 1.6;
   font-weight: 400;
   color: rgba(0,0,0,.65);
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    font-weight: 300;
+  }
 }
 html {
   overflow-y: scroll;

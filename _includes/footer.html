@@ -19,11 +19,11 @@
       $('.info').css('top', '0px');
     }
 
-    window.requestAnimationFrame(stickyInfo);
-
   }
 
-  window.requestAnimationFrame(stickyInfo);
+  window.onscroll = function () {
+    stickyInfo();
+  };
 
   function scrollDistance(){
     return $(document).scrollTop();
