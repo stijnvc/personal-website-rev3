@@ -182,7 +182,7 @@ header {
       margin-top: 16vh;
       margin-bottom: 100px;
     }
-    .info, .breakout {
+    .info {
       margin-bottom: 50px;
       img {
         margin: 0 0 50px 0;
@@ -197,6 +197,24 @@ header {
       }
       .meta {
         opacity: .5;
+      }
+    }
+    @media (min-width: 920px){
+    & > .info.fixed {
+        opacity: 0;
+        user-select: none;
+      }
+    }
+    #info-clone {
+      .info {
+        position: fixed;
+        display: none;
+      }
+      .info.fixed {
+        @media (min-width: 920px){
+          display: block;
+          top: 80px;
+        }
       }
     }
     video, img {
@@ -239,6 +257,9 @@ header {
     }
     .process-toggle {
       display: block;
+      text-align: center;
+      background-color: rgba(0,0,0,.05);
+      padding: 1em .5em;
       margin: 50px auto;
       @media (min-width: 920px){
         margin: 100px auto;

@@ -7,23 +7,35 @@
 <script>
   $( ".process-toggle" ).click(function( e ) {
     e.preventDefault();
-    $( ".process" ).toggleClass('hidden');
+    $( ".process" ).removeClass('hidden');
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".process-toggle").offset().top - 50
+    }, 600);
   });
+
+  $( ".info" ).clone().appendTo( "#info-clone" );
+
   function stickyInfo(){
 
     var scrollDist = scrollDistance();
     var yPos = getPosition($('article')) - 80;
     if(scrollDist > yPos && viewportHeight() > $('.info').height() + 100){
-      $('.info').css('top', scrollDist-yPos+'px');
+      $('.info').addClass('fixed');
     }else{
-      $('.info').css('top', '0px');
+      $('.info').removeClass('fixed');
     }
+    $('#info-clone .info.fixed').width($('article > .info').width());
+    $('#info-clone .info.fixed').css('left', $('article > .info').offset().left);
 
   }
 
+  stickyInfo();
   window.onscroll = function () {
     stickyInfo();
   };
+  $( window ).resize(function() {
+    stickyInfo();
+  });
 
   function scrollDistance(){
     return $(document).scrollTop();
