@@ -18,6 +18,35 @@
     position: fixed;
     z-index: -9999;
 }
+
+// Object Sans
+
+@font-face {
+	font-family: 'Object Sans Web';
+	src: url('fonts/ObjectSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Object Sans Web';
+	src: url('fonts/ObjectSans-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Object Sans Web';
+	src: url('fonts/ObjectSans-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Object Sans Web';
+	src: url('fonts/ObjectSans-Bold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+
 // FF DIN Pro
 
 @font-face {
@@ -69,11 +98,11 @@
           box-sizing: border-box;
 }
 body {
-  font-family: "FF DIN Pro Web", sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
+  font-family: "Object Sans Web", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
   font-weight: 400;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.8);
   @media (-webkit-min-device-pixel-ratio: 2),
          (min-resolution: 192dpi) {
     font-weight: 300;
@@ -135,7 +164,8 @@ header {
   }
   .logo {
     display: block;
-    width: 220px;
+    opacity: .8;
+    width: 240px;
     margin: 0 auto;
     @media (min-width: 920px){
       margin: 0;
@@ -147,14 +177,14 @@ header {
       text-align: right;
     }
     a {
-      color: inherit;
+      color: rgba(0,0,0,.4);
       display: inline-block;
       padding: 1em 0;
       margin-left: 1em;
       text-decoration: none;
     }
     a:hover {
-      color: black;
+      color: rgba(0,0,0,.8);
     }
   }
 }
@@ -278,9 +308,13 @@ header {
     text-decoration: none;
     }
     h1 {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 400;
-      color: rgba(0,0,0,.65);
+      color: rgba(0,0,0,.4);
+      @media (-webkit-min-device-pixel-ratio: 2),
+             (min-resolution: 192dpi) {
+        font-weight: 300;
+      }
     }
     img {
       width: 100%;
